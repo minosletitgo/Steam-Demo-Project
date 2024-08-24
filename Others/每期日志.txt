@@ -1,0 +1,64 @@
+
+2019.12.13-2019.12.17
+01.增加指令退还，当前只有【工人】有影响，即修复之前需要白天重新向建筑投放金币。
+02.代码大面积前缀改名，区分友方(F)和敌方(E)。
+03.友方NPC扔金币：与Player距离足够近，则扔金币；与Player距离足够远，则“吞掉”自己圆柱范围内的金币。
+04.武器无法释放问题修复：CharacterAbility不能在LateUpdate这种延迟逻辑层做发起调用。
+05.碰撞矩阵关系直接代码注写：Minos_GlobalCore
+06.兔子工厂(代指小动物)
+07.模仿写一些重要的AI判断脚本：
+    a.Minos_AIActionMoveTowardsTarget3D 新增朝向
+    b.Minos_AIDecisionDetectTargetRadius3D 新增白天黑夜、真实最近距离判断
+08.关于MMPath的巡逻点赋值问题，永远记住是相对点(世界坐标和相对坐标)
+09.简单添加【弓箭塔】，由于高度差问题，还无法射中目标.
+
+
+2019.12.17-2019.12.21
+01.建筑死亡直接降级到0级
+02.增加弓箭塔内站立AI片段
+03.季节补全：天数，白天黑夜(血夜)，四季
+04.镰刀工厂，农民耕田，收成
+05.自写一些AI片段逻辑，使得【Patrol】可以穿插【PathFinder】。以【Farmer】为例。
+06.修复弓箭手第一次射击的方向是错误的BUG（直接把武器弓的旋转速度加大）
+07.复制粘贴怪物：近战小怪AB，近战BossAB
+08.添加表格读取（EverydayEnemy.txt，应用
+
+
+2019.12.23-2019.12.29
+01.【角色预制体】直接改为“不体现等级”
+02.为Homeland定制“左右防守巡逻点”，弓箭手左右防守端，F_Wall左右防守巡逻点，最外围的Wall关联逻辑
+03.构建友方NPC属性、墙壁属性:
+	【弓箭手】属性关联：血量、伤害、伤害延迟、命中率
+	【工人，农民】属性关联
+	【墙壁Wall】关联表格
+	【XXX_Factory】加入“产出角色等级”，为雕像预留
+04.表格添加支持字段描述（txt保存格式必须是utf-8）
+05.图腾(雕像)Totem（F_HammermanTotem,F_BowmanTotem,F_FarmerTotem）
+06.取消【角色预制体】和【建筑预制体】使用手动设置Type的方式，直接在代码内初始化。
+07.按照TopDownEngine的方式，使得NPC能够Running:
+08.近战战士A雏形，骑士雏形(以及对应雕像)
+09.属性表添加 WalkSpeed、RunSpeed
+10.Unity版本升级 ( 2018.4.13f1 -> 2019.2.16f1 )
+11.TopDownEngine 升级至1.5.1：
+12.为了能够制作复杂AI，引入BehaviorDesign（先就使用2个子包）：
+	Behavior Designer 1.6.3.unitypackage
+	Behavior Designer - Movement Pack v1.5.5.unitypackage
+13.对于TopDownEngin的原有AI，开始剔除工作(预计完成后可以完全丢弃老版AI)：
+	使用BD新制作【NavMesh巡逻】，【半径侦查目标】、【朝向移动】
+	反复测试后，嵌入到【兔子、野人】
+
+
+2019.12.30-2020.01.04
+本期主要是研究行为树，比较头疼。
+01.BehaviorDesign：【锤子工人 砍树、升级建筑、修建建筑 + 进入夜间而打断】
+02.BehaviorDesign：【农民、种田 + 进入夜间而打断】
+03.弓箭手，补充WeaponIK，“真实拿枪瞄准姿势”
+04.BehaviorDesign：【弓箭手，白天巡逻打猎，夜间回城（暂无攻击）】
+05.BehaviorDesign：【敌方怪物A，简单巡逻攻击】
+
+
+
+
+
+
+

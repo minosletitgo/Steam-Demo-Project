@@ -1,0 +1,8 @@
+DayId	InNight	InDay
+//天数索引0开始	夜晚刷怪	
+0	E_MonsterNearA:1	
+1	E_MonsterNearA:1|E_MonsterNearB:1	
+2	E_MonsterNearA:2|E_MonsterNearB:2	
+3	E_MonsterNearA:2|E_MonsterNearB:2|E_BossNearA:1	
+4	E_MonsterNearA:2|E_MonsterNearB:2|E_BossNearA:2	
+5	E_MonsterNearA:2|E_MonsterNearB:2|E_BossNearA:1|E_BossNearB:1	

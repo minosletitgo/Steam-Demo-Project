@@ -1,0 +1,9 @@
+CharacterType	Lv	Hp	Damage	DamageDelay	WalkSpeed	RunSpeed
+//角色工种	等级	血量	伤害	伤害间隔（延迟）	行走速度	奔跑速度
+E_MonsterNearA	1	23	4	6	2	4
+E_MonsterNearB	1	20	5	7	2.2	4
+E_MonsterFarA	1	25	8	6	2.2	4
+E_MonsterFarB	1	30	10	6	2.2	4
+E_BossNearA	1	40	12	5	2.2	4
+E_BossNearB	1	50	5	7	2	4
+E_BossFar	1	55	8	7	2	4

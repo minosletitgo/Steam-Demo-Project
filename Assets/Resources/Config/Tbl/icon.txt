@@ -1,0 +1,6 @@
+ID	Atlas	Sprite	Dimension
+1	Common01	Sprite01	D:100:100
+2	Common02	Sprite02	D:100:101
+3	Common03	Sprite03	D:100:102
+4	Common04	Sprite04	D:100:103
+5	Common05	Sprite05	D:100:104

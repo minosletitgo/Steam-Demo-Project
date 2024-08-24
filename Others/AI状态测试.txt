@@ -1,0 +1,33 @@
+
+
+
+    /*
+        原始人初步设计复杂AI(双目标问题大)：
+        .【PatrolingToMoneyCoin】
+            A：[AIActionMovePatrol3D]            
+            D：[AIDecisionDetectTargetRadius3D](5 -> MoneyCoin) 
+                True -> 【MoveToMoneyCoin】
+                False -> 【PatrolingToPlayer】
+        .【MoveToMoneyCoin】
+            A: [AIActionMoveTowardsTarget3D]
+            D: [AIDecisionTargetIsNull]
+                True -> 【PatrolingToPlayer】
+        .【PatrolingToPlayer】
+            A：[AIActionMovePatrol3D]            
+            D：[AIDecisionDetectTargetRadius3D](5 -> Player) 
+                True -> 【MoveToPlayer】
+                False -> 【PatrolingToMoneyCoin】
+        .【MoveToPlayer】
+            A: [AIActionMoveTowardsTarget3D]
+            D: [AIDecisionDistanceToTarget](Dis > 5) 
+                True -> 【PatrolingToMoneyCoin】
+                False -> 【Praying】
+        .【Praying】
+            A: [Minos_AIActionPlayAnimation]
+            D：[AIDecisionDetectTargetRadius3D](5 -> MoneyCoin) 
+                True -> 【MoveToMoneyCoin】
+                False -> Null
+            D：[AIDecisionDistanceToTarget](Dis < 2) 
+                True -> Null
+                False -> 【PatrolingToMoneyCoin】
+    */

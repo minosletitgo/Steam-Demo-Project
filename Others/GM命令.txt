@@ -1,0 +1,26 @@
+
+
+/AddCurrentHealth 7
+/AddHammerman 1
+/AddBowman 1
+/AddFarmer 1
+/AddNearWarriorA
+/AddKnight
+/AddMonster 1
+/DamageWall 1
+/DamageTower 1
+/ReviveWall
+/Get_F_DefendLeftWall
+/Get_F_DefendRightWall
+/IBaseAIActionOrder.DebugPrint
+/F_HammermanFactory.InterruptConnectAIActionOrder
+
+/DebugSet_OnDayIndexChg 5
+/DebugSet_OnIsDayComing
+/DebugSet_OnIsNightComing 0 0
+/DebugSet_OnSeasonIndexChg Spring Winter
+
+/Attack
+/Run 1
+/DebugDead
+/Face North
